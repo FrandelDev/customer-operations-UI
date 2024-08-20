@@ -1,0 +1,312 @@
+
+:root{
+    --options-bg: #202938;
+    --option-get-all: #014991;
+    --option-get-one:#1e8cfa;
+    --option-create: #49cc90;
+    --option-update: #e48b1e;
+    --option-delete: #f93e3e;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    display: grid;
+    grid-template-columns: 0.3fr 2fr;
+    background-color: rgba(211, 211, 211, 0.342);
+}
+body > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+body > div > #title{
+    align-self: baseline;
+    margin: 25px 0px 15px 11%;
+    font-family: sans-serif;
+    font-size: 22px;
+}
+#views{
+    width: 70%;
+    height: 70vh;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar {
+    display: none;  /* Ocultar la barra de desplazamiento en WebKit */
+}
+#IdCardNumberGenerated{
+    margin-left: 21.5%;
+    height: 50px;
+    font-family: sans-serif;
+}
+#IdCardNumberGenerated #IdCardNumberInputGenerated{
+    height: 20px;
+    padding-left: 10px;
+    border: solid lightgray;
+    border-radius: 10px;
+}
+#IdCardNumberGenerated #IdCardNumberInputGenerated:focus{
+    outline: none;
+}
+#IdCardNumberGenerated button{
+    padding: 5px;
+    font-weight: bold;
+    background-color: var(--option-get-one);
+    color: #fff;
+    border: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#btns{
+    z-index: 3;
+    height: 100vh;
+    background-color: var(--options-bg);
+}
+#btns h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    color: #fff;
+    font-style: italic;
+}
+#btns button{
+    display: block;
+    margin-bottom: 20px;
+    width: 108%;
+    height: 40px;
+    font-size: medium;
+    font-weight: bolder;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    border-color: transparent;
+    cursor: pointer;
+}
+#btns button:nth-child(2){
+    background-color: var(--option-get-all);
+}
+#btns button:nth-child(3){
+    background-color: var(--option-get-one);
+}
+#btns button:nth-child(4){
+    background-color: var(--option-create);
+}
+#btns button:nth-child(5){
+    background-color: var(--option-update);
+}
+#btns button:nth-child(6){
+    background-color: var(--option-delete);
+}
+#views{position: relative;}
+#views form{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    width: 95%;
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-size: 13px;
+    border-top: 1px solid rgba(0, 0, 0, 0.26);
+}
+#views form div input {
+    height: 20px;
+    border: solid lightgray;
+    border-radius: 8px;
+}
+#views form div input:focus{
+    outline: none;
+}
+#views form label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#views form > div {
+    text-align: center;
+}
+
+#views form #form1 label p{
+    margin-bottom: 3px;
+}
+#views form #form1 input{
+    text-align: center;
+}
+#views form #form2 label{
+    display: block;
+    text-align: end;
+}
+#views form #form2 #gender{
+    float: right;
+    padding-right: 20px;
+}
+#views form #form2 #gender label{
+    display: inline;
+    text-align: center;
+    margin: 15px;
+}
+
+#views form #form2 #Contacts{
+    margin-top: 20px;
+}
+#views form #form2 #Contacts .contact{
+    margin-bottom: 10px;
+}
+#views form #form2 #Contacts #controls{
+    display: flex;
+    justify-content: flex-end;
+}
+#views form #form2 #Contacts #controls input{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    border-color: transparent;
+    border-radius: 100%;
+    font-size: 24px;
+    cursor: pointer;
+}
+#views form #form2 div p{
+    margin-bottom: 5px;
+}
+#views form #form2 div{
+    text-align: center;
+
+}
+input[type="submit"]{
+    width: 200px;
+    height: 30px;
+    font-weight: bolder;
+    color: #fff;
+    border-color: transparent;
+    background-color: var(--option-create);
+    cursor: pointer;
+}
+#btn-delete{
+position: absolute;
+bottom: 80px;
+width: 430px;
+height: 40px;
+font-size: 18px;
+font-weight: bolder;
+color: #fff;
+border-color: transparent;
+background-color: var(--option-delete);
+cursor: pointer;
+}
+#Results{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.26);
+    padding-top: 35px;
+    padding-left: 50px;
+    margin-top: 20px;
+}
+#Results h1{
+    grid-area: 1/2;
+    text-align: center;
+    width: max-content;
+    max-width: 500px;
+    padding: 30px;
+    margin-top: 100px;
+    margin-right: 50px;
+    font-size: 36px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: #fff;
+    background-color: rgba(211, 211, 211, 0.568);
+}
+#Results details > summary{
+    width: 110px;
+    padding: 3.5px 8px 0px 8px;
+    text-align: center;
+    font-size: small;
+    background-color: #e8e3e3;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+#Results details > summary::after{
+    content: '';
+    display: block;
+    width: calc(100% + 70px);
+    height: 100px;
+    border-radius: 8px;
+    background-color: #e8e3e3;
+}
+#Results details[open] > summary::after{
+    width: 100%;
+    height: 20px;
+}
+#Results details[open] > :not(summary){
+    background-color: #e8e3e3;
+    border-radius: 0 8px 8px 0;
+}
+#Results details[open]{
+    width: 330px;
+}
+#Results details > ul{
+
+    padding: 5px 10px;
+}
+#Results details > ul > li{
+    display: block;
+    text-decoration: none;
+}
+
+#successMsg{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    height: fit-content;
+    min-height: 65px;
+    max-height: 130px;
+    padding-right: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background-color: var(--option-create);
+    z-index: 4;
+}
+#successMsg img{
+    width: 45px;
+    margin: 10px;
+}
+#successMsg p{
+    width: 300px;
+    overflow-wrap: break-word;
+}
+#errorMsg{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    height: fit-content;
+    min-height: 65px;
+    max-height: 130px;
+    padding-right: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background-color: var(--option-delete);
+    z-index: 4;
+}
+#errorMsg img{
+    width: 45px;
+    margin: 10px;
+}
+#errorMsg p{
+    width: 300px;
+    overflow-wrap: break-word;
+}

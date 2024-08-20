@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Operations</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script src="./scripts/index.js" type="module" defer></script>
+</head>
+
+<body>
+    <section id="btns">
+        <h1 onclick="location.reload()" style="cursor: pointer;">Customer Operations</h1>
+        <button id="get-all">Get All</button>
+        <button id="get-one">Get One</button>
+        <button id="create">Create</button>
+        <button id="update">Update</button>
+        <button id="delete">Delete</button>
+    </section>
+    <div id="views-container">
+        <h2 id="title"> </h2>
+        <section id="views">
+        <form>
+            <div id="form1">
+
+                <label for="IdCardNumberInput" id="IdCardNumber">
+                    <p>Identification Card Number:</p>
+                    <input type="text"  id="IdCardNumberInput" placeholder="000-0000000-0">
+                </label><br>
+                
+                <label for="NameInput">
+                   <p>First Name:</p> 
+                    <input type="text" id="NameInput" required>
+                </label><br>
+                
+                <label for="SecondNameInput">
+                    <p>Second Name:</p>
+                    <input type="text" id="SecondNameInput">
+                </label><br>
+                
+                <label for="FLastNameInput">
+            <p>First Last Name:</p>
+            <input type="text" id="FLastNameInput" required>
+        </label><br>
+        
+        <label for="SLastNameInput">
+            <p>Second Last Name:</p>
+            <input type="text" id="SLastNameInput">
+        </label><br>
+        
+        <label for="Nationality">
+            <p>Nationality:</p>
+            <input type="text" id="Nationality" required>
+        </label><br>
+        
+        <label for="date">
+            <p>Birth Date:</p>
+            <input type="date" id="date" required>
+        </label><br>
+    </div>
+    <div id="form2">
+
+        <div id="gender">
+            <p><b>Gender</b></p>
+            <label for="Female">
+                Female:
+                <input type="radio" name="gender" id="Female" required>
+            </label>
+            
+            <label for="Male">
+                Male:
+                <input type="radio" name="gender" id="Male">
+            </label>
+        </div><br>
+        
+        <div id="Contacts">
+                               <p><b>               For Contact </b></p>
+            <div id="contactGroup">
+                <div class="contact">
+                    <label for="phone">
+                        Phone Number
+                        <input type="tel" id="phone" required>
+                    </label>  
+                    <label for="email">
+                        E-mail:
+                        <input type="email" id="email" required>
+                    </label>
+                </div>
+            </div>
+            <div id="controls">
+                <input type="button" value="+" id="btn-add">
+                <input type="button" value="-" id="btn-rest">
+            </div>
+        </div><br>
+        
+        <div id="address">
+            <p><b>                Address </b></p>
+            <label for="country">
+                Country Name:
+                <input type="text" id="country" required>
+            </label><br>
+            
+            <label for="city">
+                City Name:
+                <input type="text" id="city" required>
+            </label><br>
+
+            <label for="region">
+                Region Name: 
+                <input type="text" id="region" required>
+            </label><br>
+            
+            <label for="sector">
+                Sector Name: 
+                <input type="text" id="sector" required>
+            </label><br>
+            
+            <label for="postal">
+                Postal Code: 
+                <input type="text" id="postal" required>
+            </label>
+        </div>
+    </div>
+        <input type="submit" value="Send" id="btn-send">
+    </form>
+    
+    <section id="Results">
+        <h1>Choose an option to get started</h1>
+    </section>
+</section>
+</div>
+</body>
+
+</html>
